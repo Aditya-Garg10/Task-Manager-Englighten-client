@@ -52,6 +52,8 @@ body {
   .features ul {
     list-style-type: disc;
     margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
   }
   
   .features li {
