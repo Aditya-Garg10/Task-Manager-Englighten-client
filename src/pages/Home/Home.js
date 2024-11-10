@@ -197,15 +197,7 @@ const [errors, setErrors] = useState({});
 
 function TaskEditor() {
   const { selectedTask,handleTabClick } = useContext(TaskContext);
-  const {
-    _id,
-    title,
-    description,
-    status,
-    assignedTo,
-    createdAt,
-    updatedAt,
-  } = selectedTask;
+
  
 
   const [taskTitle, setTaskTitle] = useState('');
