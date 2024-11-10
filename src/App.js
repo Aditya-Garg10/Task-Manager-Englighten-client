@@ -10,7 +10,7 @@ import { TaskContext } from "./context/TaskContext";
 import AboutPage from "./pages/about/AboutPage";
 
 
-export const HOST = "http://localhost:5000"
+export const HOST = "https://task-manager-enlighten.onrender.com"
 const App = () => {
   
   const {tasks,setTasks,getTask} = useContext(TaskContext)
