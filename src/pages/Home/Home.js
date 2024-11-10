@@ -142,7 +142,7 @@ const [errors, setErrors] = useState({});
       {title ? (
         <div className="main-container">
         
-        <div className="card-main2">
+        <div className="card-main3">
           {/* <button onClick={handeRedirect}>Click to Edit</button> */}
           <div className="form-container">
       <h3>Edit a Task</h3>
