@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+Task Management App
+Description
+This is a real-time Task Management App built with the MERN (MongoDB, Express, React, Node.js) stack. The app allows users to manage tasks collaboratively with real-time updates, authentication, and a user-friendly interface. Using Socket.IO and WebSockets, this app supports instant updates and smooth collaboration between multiple users.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Real-time Data Updates: Uses WebSockets with Socket.IO for real-time data synchronization, so changes are instantly reflected across all users.
+Collaboration Support: Multiple users can view, edit, and update tasks simultaneously.
+User Authentication: Secure login, registration, and access control using JSON Web Tokens (JWT).
+Responsive UI: Developed with Material UI and React, ensuring an accessible experience on all devices.
+Technologies Used
+Frontend: React, Material UI
+Backend: Node.js, Express, Socket.IO
+Database: MongoDB
+Authentication: JWT (JSON Web Tokens)
+Real-Time Communication: WebSockets with Socket.IO
+Installation
+Follow these steps to set up the project locally.
 
-## Available Scripts
+Prerequisites
+Node.js (v14 or higher recommended)
+MongoDB
+Optional: MongoDB Atlas for a cloud-hosted database
+Setup
+Clone the repository:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone https://github.com/Aditya-Garg10/Task-Manager-Englighten-client.git
+cd client
+Install dependencies for both frontend and backend:
 
-### `npm start`
+bash
+Copy code
+# Install server dependencies
+cd server
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Install client dependencies
+cd ../client
+npm install
+Configure environment variables:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Create a .env file in the server directory with the following variables:
 
-### `npm test`
+env
+Copy code
+MONGO_URI = mongodb+srv://adityagarg646:Qpoc9jBMtFz53AlK@cluster1.ro01vgx.mongodb.net/portfolio
+JWT_SECRET = adityagarg6463
+Run the app:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In the root directory, start the backend and frontend servers.
 
-### `npm run build`
+bash
+Copy code
+# Start server
+cd server
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Start client
+cd ../client
+npm start
+Access the app:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Open your browser and go to http://localhost:3000 to use the app.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Usage
+Sign up or Log in: Register or log in to access your tasks.
+Add Tasks: Create new tasks, which will be instantly updated for all team members.
+Edit and Delete Tasks: Make changes to tasks in real-time, visible to all active users.
+Collaboration: View updates made by other users as they happen.
+API Endpoints
+POST /api/auth/register: Register a new user
+POST /api/auth/login: Log in a user
+POST /api/tasks: Create a new task
+GET /api/tasks: Get all tasks for the logged-in user
+PUT /api/tasks/:id: Update a specific task
+DELETE /api/tasks/:id: Delete a specific task
+Contributing
+Feel free to submit issues or pull requests. For major changes, please discuss them with me beforehand.
 
-### `npm run eject`
+License
+This project is licensed under the MIT License.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Acknowledgments
+Special thanks to [any resources, tutorials, or individuals that helped with the project].
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
