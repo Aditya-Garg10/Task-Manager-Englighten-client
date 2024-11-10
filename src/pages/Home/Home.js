@@ -254,8 +254,8 @@ function TaskEditor() {
     }
   };
   return (
-    <div className="tab-pane">
-      <div className="card-main2">
+    
+      <div className="card-main3">
       <h2>Create a New Task</h2>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form className="form-container" onSubmit={handleSubmit}>
@@ -321,7 +321,7 @@ function TaskEditor() {
 
         <button type="submit">Create Task</button>
       </form>
-    </div>
+    
     </div>
   );
 }
